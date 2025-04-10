@@ -53,7 +53,7 @@ const Navbar = () => {
             ))}
           </div>
           
-          <Button className="bg-highlight text-dark hover:bg-highlight/90 font-medium px-6 py-6 h-auto text-base rounded-lg shadow-lg shadow-highlight/20 transition-all duration-300 hover:translate-y-[-2px]">
+          <Button className="bg-purple-primary hover:bg-purple-primary/90 text-white font-medium px-6 py-6 h-auto text-base rounded-lg shadow-lg shadow-purple-primary/20 transition-all duration-300 hover:translate-y-[-2px]">
             Pitch Your Game
           </Button>
         </div>
@@ -82,7 +82,7 @@ const Navbar = () => {
             </Link>
           ))}
           
-          <Button className="bg-highlight text-dark hover:bg-highlight/90 mt-3 w-full font-medium py-6 h-auto text-base rounded-lg shadow-lg shadow-highlight/20">
+          <Button className="bg-purple-primary hover:bg-purple-primary/90 mt-3 w-full font-medium py-6 h-auto text-base rounded-lg shadow-lg shadow-purple-primary/20">
             Pitch Your Game
           </Button>
         </div>

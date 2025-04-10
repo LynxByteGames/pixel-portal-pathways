@@ -16,7 +16,7 @@ const SplitHero = () => {
         }} 
         onClick={() => navigate('/publishing')}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/60 to-dark/80 transition-all duration-500 group-hover:opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-primary/80 via-dark/60 to-dark/80 transition-all duration-500 group-hover:opacity-90"></div>
         
         <div className="hero-content relative z-20 p-8 md:p-12">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg transition-all duration-500 group-hover:translate-y-0">
@@ -28,7 +28,7 @@ const SplitHero = () => {
               Get your game in front of millions. We handle marketing, distribution, and more.
             </p>
             
-            <button className="cta-button flex items-center shadow-xl shadow-highlight/20 hover:shadow-highlight/30 hover:translate-y-[-3px]">
+            <button className="cta-button flex items-center shadow-xl shadow-purple-primary/20 hover:shadow-purple-primary/30 hover:translate-y-[-3px] bg-purple-primary text-white">
               Learn More <ChevronRight className="ml-2" size={20} />
             </button>
           </div>
@@ -43,7 +43,7 @@ const SplitHero = () => {
         }} 
         onClick={() => navigate('/porting')}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/60 to-dark/80 transition-all duration-500 group-hover:opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-accent/80 via-dark/60 to-dark/80 transition-all duration-500 group-hover:opacity-90"></div>
         
         <div className="hero-content relative z-10 p-8 md:p-12">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg transition-all duration-500 group-hover:translate-y-0">
@@ -55,7 +55,7 @@ const SplitHero = () => {
               Expand your reach across platforms. Expert porting services for maximum compatibility.
             </p>
             
-            <button className="cta-button flex items-center shadow-xl shadow-highlight/20 hover:shadow-highlight/30 hover:translate-y-[-3px]">
+            <button className="cta-button flex items-center shadow-xl shadow-purple-accent/20 hover:shadow-purple-accent/30 hover:translate-y-[-3px] bg-purple-accent text-white">
               Learn More <ChevronRight className="ml-2" size={20} />
             </button>
           </div>
