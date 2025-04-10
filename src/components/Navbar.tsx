@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <img src="/public/lovable-uploads/a2b63ed7-39de-4220-b35c-4fa5682dd233.png" alt="LYNXBYTE GAMES" className="h-10" />
+          <img src="/lovable-uploads/a2b63ed7-39de-4220-b35c-4fa5682dd233.png" alt="LYNXBYTE GAMES" className="h-10" />
           <span className="text-xl font-bold text-white">LYNXBYTE GAMES</span>
         </Link>
         

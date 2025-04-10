@@ -18,7 +18,7 @@ const SplitHero = () => {
       >
         <div className="absolute inset-0 bg-dark opacity-70"></div>
         <img 
-          src="/public/lovable-uploads/a4fd954e-aeb8-4f66-b785-a3cad28cfde0.png" 
+          src="/lovable-uploads/a4fd954e-aeb8-4f66-b785-a3cad28cfde0.png" 
           alt="Game controllers and devices" 
           className="absolute right-0 bottom-0 w-2/3 md:w-1/2 z-10"
         />
