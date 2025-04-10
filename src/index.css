@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +90,51 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-dark text-white;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .hero-section {
+    @apply relative h-screen cursor-pointer overflow-hidden transition-all duration-300;
+  }
+  
+  .hero-section::before {
+    @apply content-[''] absolute inset-0 bg-dark opacity-50 transition-opacity duration-300;
+  }
+  
+  .hero-section:hover::before {
+    @apply opacity-75;
+  }
+  
+  .hero-section:hover .hero-content {
+    @apply translate-y-0 opacity-100;
+  }
+  
+  .hero-content {
+    @apply absolute inset-0 flex flex-col items-center justify-center space-y-4 
+           px-6 text-center text-white opacity-90 transform translate-y-4 
+           transition-all duration-300;
+  }
+  
+  .cta-button {
+    @apply bg-highlight text-dark font-bold px-6 py-3 rounded-md 
+           transition-all duration-300 hover:bg-opacity-80;
+  }
+  
+  .nav-link {
+    @apply relative text-white opacity-70 hover:opacity-100 transition-opacity 
+           duration-200 after:absolute after:bottom-0 after:left-0 after:h-0.5 
+           after:w-0 after:bg-highlight after:transition-all after:duration-300 
+           hover:after:w-full;
+  }
+  
+  .nav-link.active {
+    @apply opacity-100 after:w-full;
   }
 }
