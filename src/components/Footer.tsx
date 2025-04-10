@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Gamepad, Twitter, Linkedin, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Twitter, Linkedin, Facebook } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,8 +11,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <Gamepad size={24} className="text-highlight" />
-              <span className="text-xl font-bold text-white">PixelPortal</span>
+              <img src="/public/lovable-uploads/a2b63ed7-39de-4220-b35c-4fa5682dd233.png" alt="LYNXBYTE GAMES" className="h-8" />
+              <span className="text-xl font-bold text-white">LYNXBYTE GAMES</span>
             </div>
             <p className="text-white/70 mb-4">
               Connecting game developers with global audiences through publishing and porting excellence.
@@ -93,14 +93,14 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-highlight mr-2" />
-                <span className="text-white/70">contact@pixelportal.com</span>
+                <span className="text-white/70">contact@lynxbytegames.com</span>
               </li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-white/10 pt-8 text-center text-white/50 text-sm">
-          <p>&copy; {new Date().getFullYear()} PixelPortal. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} LYNXBYTE GAMES. All rights reserved.</p>
         </div>
       </div>
     </footer>
