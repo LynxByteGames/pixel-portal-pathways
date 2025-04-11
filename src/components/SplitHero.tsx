@@ -7,7 +7,7 @@ const SplitHero = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen">
+    <div className="flex flex-col md:flex-row min-h-screen pt-24">
       {/* Developer Section */}
       <div 
         className="hero-section group flex-1 bg-cover bg-center relative overflow-hidden transition-all duration-500" 
