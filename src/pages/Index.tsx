@@ -1,7 +1,7 @@
 
 import React from "react";
 import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
+import SplitHero from "@/components/SplitHero";
 import ServicesSection from "@/components/ServicesSection";
 import PortfolioShowcase from "@/components/PortfolioShowcase";
 import StatsCounter from "@/components/StatsCounter";
@@ -13,7 +13,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#191930] via-[#1e1e35] to-[#191930]">
       <Navbar />
-      <HeroSection />
+      <SplitHero />
       <ServicesSection />
       <PartnersSection />
       <PortfolioShowcase />

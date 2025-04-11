@@ -7,7 +7,7 @@ const SplitHero = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen pt-20">
+    <div className="flex flex-col md:flex-row min-h-screen">
       {/* Developer Section */}
       <div 
         className="hero-section group flex-1 bg-cover bg-center relative overflow-hidden transition-all duration-500" 
@@ -28,7 +28,7 @@ const SplitHero = () => {
               Get your game in front of millions. We handle marketing, distribution, and more.
             </p>
             
-            <button className="cta-button flex items-center shadow-xl shadow-purple-primary/20 hover:shadow-purple-primary/30 hover:translate-y-[-3px] bg-purple-primary text-white">
+            <button className="cta-button flex items-center shadow-xl shadow-purple-primary/30 hover:shadow-purple-primary/50 hover:translate-y-[-3px] bg-gradient-to-r from-purple-primary to-purple-accent text-white rounded-lg px-6 py-3">
               Learn More <ChevronRight className="ml-2" size={20} />
             </button>
           </div>
@@ -55,7 +55,7 @@ const SplitHero = () => {
               Expand your reach across platforms. Expert porting services for maximum compatibility.
             </p>
             
-            <button className="cta-button flex items-center shadow-xl shadow-purple-accent/20 hover:shadow-purple-accent/30 hover:translate-y-[-3px] bg-purple-accent text-white">
+            <button className="cta-button flex items-center shadow-xl shadow-purple-accent/30 hover:shadow-purple-accent/50 hover:translate-y-[-3px] bg-gradient-to-r from-purple-accent to-pink-500 text-white rounded-lg px-6 py-3">
               Learn More <ChevronRight className="ml-2" size={20} />
             </button>
           </div>
