@@ -154,9 +154,38 @@
   .stat-animate {
     @apply transition-all duration-500 hover:scale-105 hover:text-purple-primary;
   }
+  
+  /* Glassmorphism components */
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl transition-all duration-300;
+  }
+  
+  .glass-card:hover {
+    @apply bg-white/10 border-purple-primary/30 shadow-lg shadow-purple-primary/10;
+  }
+  
+  /* Neon effects */
+  .neon-box {
+    @apply relative;
+  }
+  
+  .neon-box::before {
+    @apply content-[''] absolute inset-0 rounded-xl bg-gradient-to-r from-purple-primary to-purple-accent opacity-0 transition-opacity duration-300 blur-xl -z-10;
+  }
+  
+  .neon-box:hover::before {
+    @apply opacity-70;
+  }
+  
+  /* Modern input styling */
+  .modern-input {
+    @apply bg-white/5 border border-white/10 rounded-lg px-4 py-3 
+           focus:outline-none focus:border-purple-primary/50 focus:ring-1 
+           focus:ring-purple-primary/30 transition-all duration-300;
+  }
 }
 
-/* Additional modern animations */
+/* Modern animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -210,4 +239,51 @@
 
 .btn-shine:hover::after {
   transform: translateX(100%) rotate(30deg);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(25, 25, 48, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #6a79f3, #c083e2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #566af3, #a65dd1);
+}
+
+/* Text animations */
+.text-flicker {
+  animation: textFlicker 4s infinite alternate;
+}
+
+@keyframes textFlicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 4px rgba(106, 121, 243, 0.3), 0 0 11px rgba(106, 121, 243, 0.3), 0 0 19px rgba(106, 121, 243, 0.3);
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.8;
+    text-shadow: none;
+  }
+}
+
+/* Background gradient animation */
+.bg-animate {
+  background: linear-gradient(-45deg, #191930, #1e1e35, #242450, #2a2a5a);
+  background-size: 400% 400%;
+  animation: gradientBg 15s ease infinite;
+}
+
+@keyframes gradientBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

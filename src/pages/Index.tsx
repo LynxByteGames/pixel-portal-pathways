@@ -1,20 +1,24 @@
 
 import React from "react";
 import Navbar from "@/components/Navbar";
-import SplitHero from "@/components/SplitHero";
-import CompanyInfo from "@/components/CompanyInfo";
-import Portfolio from "@/components/Portfolio";
-import Stats from "@/components/Stats";
+import HeroSection from "@/components/HeroSection";
+import ServicesSection from "@/components/ServicesSection";
+import PortfolioShowcase from "@/components/PortfolioShowcase";
+import StatsCounter from "@/components/StatsCounter";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import PartnersSection from "@/components/PartnersSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-dark flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-[#191930] via-[#1e1e35] to-[#191930]">
       <Navbar />
-      <SplitHero />
-      <CompanyInfo />
-      <Portfolio />
-      <Stats />
+      <HeroSection />
+      <ServicesSection />
+      <PartnersSection />
+      <PortfolioShowcase />
+      <StatsCounter />
+      <ContactForm />
       <Footer />
     </div>
   );
