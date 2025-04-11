@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -13,38 +12,24 @@ const Navbar = () => {
   
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
     
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [{
-    name: 'Home',
-    path: '/'
-  }, {
-    name: 'Publishing',
-    path: '/publishing'
-  }, {
-    name: 'Porting',
-    path: '/porting'
-  }, {
-    name: 'For Investors',
-    path: '/investors'
-  }, {
-    name: 'About',
-    path: '#about'
-  }];
+  const navLinks = React.useMemo(() => [
+    { name: 'Home', path: '/' },
+    { name: 'Publishing', path: '/publishing' },
+    { name: 'Porting', path: '/porting' },
+    { name: 'For Investors', path: '/investors' },
+    { name: 'About', path: '#about' }
+  ], []);
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 py-5 transition-all duration-300 ${isScrolled ? 'bg-dark/95 backdrop-blur-lg shadow-lg shadow-black/20 border-b border-white/10' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        {/* Logo - Increased size further */}
         <Link to="/" className="flex items-center space-x-4">
           <img 
             alt="LYNXBYTE GAMES" 
@@ -54,7 +39,6 @@ const Navbar = () => {
           <span className="text-2xl font-bold bg-gradient-to-r from-white via-white to-white/80 bg-clip-text text-transparent tracking-tight">LYNXBYTE GAMES</span>
         </Link>
         
-        {/* Desktop Navigation - Enhanced styling */}
         <div className="hidden md:flex items-center space-x-10">
           <div className="flex space-x-8">
             {navLinks.map(link => (
@@ -73,7 +57,6 @@ const Navbar = () => {
           </Button>
         </div>
         
-        {/* Mobile Menu Button - Enhanced styling */}
         <button 
           className="md:hidden text-white bg-purple-primary/20 p-2 rounded-full" 
           onClick={toggleMenu} 
@@ -83,7 +66,6 @@ const Navbar = () => {
         </button>
       </div>
       
-      {/* Mobile Menu - Enhanced styling */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-24 left-0 w-full bg-dark/95 backdrop-blur-lg py-6 px-6 flex flex-col space-y-5 border-b border-white/10 animate-fadeIn">
           {navLinks.map(link => (
@@ -106,4 +88,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);

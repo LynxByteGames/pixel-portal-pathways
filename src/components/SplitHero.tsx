@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronRight, Sparkles, MousePointer } from 'lucide-react';
 
@@ -12,7 +12,7 @@ const SplitHero = () => {
       <div 
         className="hero-section group flex-1 bg-cover bg-center relative overflow-hidden transition-all duration-500 cursor-pointer" 
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&q=80')"
+          backgroundImage: "url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=1920')"
         }} 
         onClick={() => navigate('/publishing')}
       >
@@ -58,7 +58,7 @@ const SplitHero = () => {
       <div 
         className="hero-section group flex-1 bg-cover bg-center relative overflow-hidden transition-all duration-500 cursor-pointer" 
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-1.2.1&auto=format&fit=crop&q=80')"
+          backgroundImage: "url('https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=1920')"
         }} 
         onClick={() => navigate('/porting')}
       >
@@ -103,4 +103,4 @@ const SplitHero = () => {
   );
 };
 
-export default SplitHero;
+export default memo(SplitHero);
