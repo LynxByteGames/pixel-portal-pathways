@@ -3,10 +3,12 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ArrowLeft, CheckCircle, Upload, ChevronRight, Sparkles } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Publishing = () => {
+  const navigate = useNavigate();
+  
   const containerVariants = {
     initial: { opacity: 0 },
     animate: { 
@@ -25,6 +27,12 @@ const Publishing = () => {
       opacity: 1,
       transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1] }
     }
+  };
+
+  const handleSubmitGame = () => {
+    // In a real app, this would open a form or modal
+    // For now, we'll just show an alert
+    alert("Thank you for your interest! Our team will contact you shortly.");
   };
   
   return (
@@ -70,7 +78,10 @@ const Publishing = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              <button className="bg-gradient-to-r from-purple-primary to-purple-accent text-white font-bold rounded-lg px-8 py-4 group relative overflow-hidden shadow-xl shadow-purple-primary/20 hover:shadow-purple-primary/40 hover:translate-y-[-3px] transition-all">
+              <button 
+                onClick={handleSubmitGame}
+                className="bg-gradient-to-r from-purple-primary to-purple-accent text-white font-bold rounded-lg px-8 py-4 group relative overflow-hidden shadow-xl shadow-purple-primary/20 hover:shadow-purple-primary/40 hover:translate-y-[-3px] transition-all"
+              >
                 <span className="relative z-10 flex items-center">
                   Submit Your Game <ChevronRight className="ml-2 transition-transform group-hover:translate-x-1" size={20} />
                 </span>
@@ -192,7 +203,10 @@ const Publishing = () => {
                     <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-purple-accent/10 rounded-full blur-3xl"></div>
                     
                     <h3 className="text-2xl font-bold text-white mb-6 relative z-10">Ready to publish your game?</h3>
-                    <button className="bg-gradient-to-r from-purple-primary to-purple-accent text-white font-bold px-8 py-3 rounded-xl hover:shadow-lg hover:shadow-purple-primary/30 hover:-translate-y-1 transition-all duration-300 group btn-shine">
+                    <button 
+                      onClick={handleSubmitGame}
+                      className="bg-gradient-to-r from-purple-primary to-purple-accent text-white font-bold px-8 py-3 rounded-xl hover:shadow-lg hover:shadow-purple-primary/30 hover:-translate-y-1 transition-all duration-300 group btn-shine"
+                    >
                       <span className="flex items-center">
                         Submit Your Game <ChevronRight className="ml-2 transition-transform group-hover:translate-x-1" />
                       </span>

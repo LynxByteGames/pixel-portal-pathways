@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect, memo } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -9,6 +8,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   
@@ -33,6 +33,10 @@ const Navbar = () => {
     { name: 'For Investors', path: '/investors' },
     { name: 'About', path: '#about' }
   ], []);
+
+  const handlePitchGame = () => {
+    navigate('/publishing');
+  };
 
   const menuVariants = {
     hidden: { 
@@ -96,7 +100,10 @@ const Navbar = () => {
             ))}
           </div>
           
-          <Button className="bg-gradient-to-r from-purple-primary to-purple-accent hover:from-purple-primary/90 hover:to-purple-accent/90 text-white font-medium px-6 py-6 h-auto text-base rounded-lg shadow-lg shadow-purple-primary/20 transition-all duration-300 hover:translate-y-[-2px] btn-shine">
+          <Button 
+            onClick={handlePitchGame}
+            className="bg-gradient-to-r from-purple-primary to-purple-accent hover:from-purple-primary/90 hover:to-purple-accent/90 text-white font-medium px-6 py-6 h-auto text-base rounded-lg shadow-lg shadow-purple-primary/20 transition-all duration-300 hover:translate-y-[-2px] btn-shine"
+          >
             Pitch Your Game
           </Button>
         </div>
@@ -132,7 +139,10 @@ const Navbar = () => {
             ))}
             
             <motion.div variants={itemVariants} className="pt-2">
-              <Button className="bg-gradient-to-r from-purple-primary to-purple-accent w-full font-medium py-6 h-auto text-base rounded-lg shadow-lg shadow-purple-primary/20 btn-shine">
+              <Button 
+                onClick={handlePitchGame}
+                className="bg-gradient-to-r from-purple-primary to-purple-accent w-full font-medium py-6 h-auto text-base rounded-lg shadow-lg shadow-purple-primary/20 btn-shine"
+              >
                 Pitch Your Game
               </Button>
             </motion.div>

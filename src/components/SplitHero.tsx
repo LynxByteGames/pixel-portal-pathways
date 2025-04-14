@@ -1,4 +1,3 @@
-
 import React, { memo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronRight, Sparkles, MousePointer, ExternalLink } from 'lucide-react';
@@ -80,7 +79,10 @@ const SplitHero = () => {
           </motion.p>
           
           <motion.div variants={itemVariants}>
-            <button className="cta-button flex items-center shadow-xl shadow-purple-primary/40 hover:shadow-purple-primary/60 hover:translate-y-[-3px] bg-gradient-to-r from-purple-primary to-purple-accent text-white font-bold rounded-lg px-8 py-4 group relative overflow-hidden">
+            <button 
+              onClick={() => navigate('/publishing')}
+              className="cta-button flex items-center shadow-xl shadow-purple-primary/40 hover:shadow-purple-primary/60 hover:translate-y-[-3px] bg-gradient-to-r from-purple-primary to-purple-accent text-white font-bold rounded-lg px-8 py-4 group relative overflow-hidden"
+            >
               <span className="relative z-10 flex items-center">
                 Learn More <ChevronRight className="ml-2 transition-transform group-hover:translate-x-1" size={20} />
               </span>
@@ -151,7 +153,10 @@ const SplitHero = () => {
           </motion.p>
           
           <motion.div variants={itemVariants}>
-            <button className="cta-button flex items-center shadow-xl shadow-purple-accent/40 hover:shadow-purple-accent/60 hover:translate-y-[-3px] bg-gradient-to-r from-purple-accent to-pink-500 text-white font-bold rounded-lg px-8 py-4 group relative overflow-hidden">
+            <button 
+              onClick={() => navigate('/porting')}
+              className="cta-button flex items-center shadow-xl shadow-purple-accent/40 hover:shadow-purple-accent/60 hover:translate-y-[-3px] bg-gradient-to-r from-purple-accent to-pink-500 text-white font-bold rounded-lg px-8 py-4 group relative overflow-hidden"
+            >
               <span className="relative z-10 flex items-center">
                 Learn More <ChevronRight className="ml-2 transition-transform group-hover:translate-x-1" size={20} />
               </span>
