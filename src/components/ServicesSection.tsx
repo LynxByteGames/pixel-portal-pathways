@@ -2,11 +2,12 @@
 import React from 'react';
 import { ArrowRight, Upload, Download, Users, HeadphonesIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
-const ServiceCard = ({ title, icon: Icon, description, index }) => {
+const ServiceCard = ({ title, icon: Icon, description, index, linkTo }) => {
   return (
     <motion.div 
-      className="service-card bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-8 transition-all duration-500 hover:transform hover:scale-105 hover:bg-white/10 hover:border-purple-primary/50 group"
+      className="service-card bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-8 transition-all duration-500 hover:transform hover:scale-105 hover:bg-white/10 hover:border-purple-primary/50 group relative overflow-hidden"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ 
         opacity: 1, 
@@ -24,9 +25,10 @@ const ServiceCard = ({ title, icon: Icon, description, index }) => {
       </div>
       <h3 className="text-2xl font-bold mb-4 text-white group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-purple-accent group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">{title}</h3>
       <p className="text-white/70 mb-6 text-lg">{description}</p>
-      <a href="#" className="inline-flex items-center text-purple-accent hover:text-white transition-colors duration-300 group-hover:underline font-medium">
+      
+      <Link to={linkTo} className="inline-flex items-center text-purple-accent hover:text-white transition-colors duration-300 group-hover:underline font-medium">
         Learn more <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-      </a>
+      </Link>
 
       {/* Decorative corner accent */}
       <div className="absolute bottom-3 right-3 w-20 h-20 bg-gradient-to-tl from-purple-primary/20 to-transparent rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
@@ -39,22 +41,26 @@ const ServicesSection = () => {
     {
       title: "Porting",
       icon: Download,
-      description: "We bring your games to new platforms with optimized performance and platform-specific features."
+      description: "We bring your games to new platforms with optimized performance and platform-specific features.",
+      linkTo: "/porting"
     },
     {
       title: "Publishing",
       icon: Upload,
-      description: "Let us handle distribution, marketing, and store presence so you can focus on what you do best."
+      description: "Let us handle distribution, marketing, and store presence so you can focus on what you do best.",
+      linkTo: "/publishing"
     },
     {
       title: "Founding",
       icon: Users,
-      description: "Get the funding and support you need to bring your gaming vision to life."
+      description: "Get the funding and support you need to bring your gaming vision to life.",
+      linkTo: "/investors"
     },
     {
       title: "Support",
       icon: HeadphonesIcon,
-      description: "Ongoing technical support and maintenance to ensure your games remain in pristine condition."
+      description: "Ongoing technical support and maintenance to ensure your games remain in pristine condition.",
+      linkTo: "#support"
     }
   ];
 
@@ -90,6 +96,7 @@ const ServicesSection = () => {
               icon={service.icon} 
               description={service.description}
               index={index}
+              linkTo={service.linkTo}
             />
           ))}
         </div>
