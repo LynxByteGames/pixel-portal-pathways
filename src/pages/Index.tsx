@@ -1,7 +1,7 @@
 
 import React, { Suspense, lazy, useEffect } from "react";
 import Navbar from "@/components/Navbar";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 // Lazy load components
 const SplitHero = lazy(() => import("@/components/SplitHero"));
@@ -62,8 +62,9 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         
-        <AnimatePresence>
+        <div>
           <motion.div
+            key="split-hero"
             initial="hidden"
             animate="visible"
             variants={sectionVariants}
@@ -74,6 +75,7 @@ const Index = () => {
           </motion.div>
           
           <motion.div
+            key="services-section"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
@@ -85,6 +87,7 @@ const Index = () => {
           </motion.div>
           
           <motion.div
+            key="stats-counter"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
@@ -96,6 +99,7 @@ const Index = () => {
           </motion.div>
           
           <motion.div
+            key="partners-section"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
@@ -107,6 +111,7 @@ const Index = () => {
           </motion.div>
           
           <motion.div
+            key="portfolio-showcase"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
@@ -118,6 +123,7 @@ const Index = () => {
           </motion.div>
           
           <motion.div
+            key="company-info"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
@@ -129,6 +135,7 @@ const Index = () => {
           </motion.div>
           
           <motion.div
+            key="contact-form"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
@@ -142,7 +149,7 @@ const Index = () => {
           <Suspense fallback={<SectionLoader />}>
             <Footer />
           </Suspense>
-        </AnimatePresence>
+        </div>
       </div>
     </div>
   );
