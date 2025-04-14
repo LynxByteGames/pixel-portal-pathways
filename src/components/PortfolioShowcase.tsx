@@ -12,6 +12,21 @@ import { motion } from 'framer-motion';
 import { PanelRight, Gamepad2 } from 'lucide-react';
 import { ScrollArea } from "@/components/ui/scroll-area";
 
+// Define the game type for better TypeScript support
+interface Game {
+  id: string;
+  title: string;
+  image: string;
+  category: string;
+  platforms: string[];
+}
+
+// Define props interface for GameCard
+interface GameCardProps {
+  game: Game;
+  index: number;
+}
+
 const games = [
   { 
     id: "game-1",
@@ -83,7 +98,7 @@ const itemVariants = {
   }
 };
 
-const GameCard = React.memo(({ game, index }) => {
+const GameCard = React.memo<GameCardProps>(({ game, index }) => {
   return (
     <motion.div
       className="will-change-transform"
@@ -236,7 +251,7 @@ const PortfolioShowcase = () => {
             <CarouselContent>
               {filteredGames.map((game, index) => (
                 <CarouselItem key={game.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
-                  <GameCard game={game} index={0} />
+                  <GameCard game={game} index={index} />
                 </CarouselItem>
               ))}
             </CarouselContent>

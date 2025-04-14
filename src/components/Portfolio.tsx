@@ -57,7 +57,6 @@ const Portfolio = () => {
               key={`portfolio-item-${index}`}
               className="will-change-transform"
               variants={cardVariants}
-              loading="lazy"
             >
               <Card className="overflow-hidden bg-purple-primary/10 border border-purple-primary/30 transition-transform duration-300 hover:scale-105 will-change-transform">
                 <div className="h-48 w-full relative">
