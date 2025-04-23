@@ -1,15 +1,15 @@
 
 import React from "react";
-import { Download, Upload, Users, HeadphonesIcon, Gamepad, Xbox, NintendoSwitch, Steam } from "lucide-react";
+import { Download, Upload, Users, HeadphonesIcon, Gamepad, Monitor, Smartphone, Box } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Left side platform icons
 const PlatformIcons = () => (
   <div className="flex items-center gap-10 mt-8">
-    <NintendoSwitch className="w-12 h-12 text-white hover:text-purple-primary transition-colors duration-200" />
     <Gamepad className="w-12 h-12 text-white hover:text-purple-primary transition-colors duration-200" />
-    <Xbox className="w-12 h-12 text-white hover:text-purple-primary transition-colors duration-200" />
-    <Steam className="w-12 h-12 text-white hover:text-purple-primary transition-colors duration-200" />
+    <Monitor className="w-12 h-12 text-white hover:text-purple-primary transition-colors duration-200" />
+    <Box className="w-12 h-12 text-white hover:text-purple-primary transition-colors duration-200" />
+    <Smartphone className="w-12 h-12 text-white hover:text-purple-primary transition-colors duration-200" />
   </div>
 );
 
