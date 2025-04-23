@@ -1,8 +1,11 @@
+
 import React, { Suspense, lazy, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
 const SplitHero = lazy(() => import("@/components/SplitHero"));
 import WhatWeDoSection from "@/components/WhatWeDoSection";
+import ImageTiles from "@/components/ImageTiles";
+import StatsTestimonials from "@/components/StatsTestimonials";
 
 const SectionLoader = () => (
   <div className="flex justify-center items-center py-20">
@@ -22,17 +25,16 @@ const Index = () => {
       "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=1920",
       "https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=1920"
     ];
-    
     preloadImages.forEach(image => {
-      const img = new Image();
+      const img = new window.Image();
       img.src = image;
     });
   }, []);
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.6, ease: "easeOut" }
     }
@@ -66,6 +68,24 @@ const Index = () => {
             variants={sectionVariants}
           >
             <WhatWeDoSection />
+          </motion.div>
+          <motion.div
+            key="image-tiles-section"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={sectionVariants}
+          >
+            <ImageTiles />
+          </motion.div>
+          <motion.div
+            key="stats-testimonials-section"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.05 }}
+            variants={sectionVariants}
+          >
+            <StatsTestimonials />
           </motion.div>
         </div>
       </div>
