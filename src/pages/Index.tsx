@@ -3,9 +3,12 @@ import React, { Suspense, lazy, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
 const SplitHero = lazy(() => import("@/components/SplitHero"));
-import WhatWeDoSection from "@/components/WhatWeDoSection";
+import WhatWeDoPro from "@/components/WhatWeDoPro";
 import ImageTiles from "@/components/ImageTiles";
 import StatsTestimonials from "@/components/StatsTestimonials";
+import SuccessStories from "@/components/SuccessStories";
+import ContactFormPro from "@/components/ContactFormPro";
+import Footer from "@/components/Footer";
 
 const SectionLoader = () => (
   <div className="flex justify-center items-center py-20">
@@ -50,6 +53,7 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         <div>
+          {/* Hero Section remains as before */}
           <motion.div
             key="split-hero"
             initial="hidden"
@@ -60,33 +64,53 @@ const Index = () => {
               <SplitHero />
             </Suspense>
           </motion.div>
+          {/* What We Do PRO – now new layout */}
           <motion.div
             key="what-we-do-section"
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            animate="visible"
             variants={sectionVariants}
           >
-            <WhatWeDoSection />
+            <WhatWeDoPro />
           </motion.div>
+          {/* Image Tiles */}
           <motion.div
             key="image-tiles-section"
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            animate="visible"
             variants={sectionVariants}
           >
             <ImageTiles />
           </motion.div>
+          {/* Stats & Testimonials */}
           <motion.div
             key="stats-testimonials-section"
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.05 }}
+            animate="visible"
             variants={sectionVariants}
           >
             <StatsTestimonials />
           </motion.div>
+          {/* Success Stories section */}
+          <motion.div
+            key="success-stories-section"
+            initial="hidden"
+            animate="visible"
+            variants={sectionVariants}
+          >
+            <SuccessStories />
+          </motion.div>
+          {/* Contact Section */}
+          <motion.div
+            key="contact-section"
+            initial="hidden"
+            animate="visible"
+            variants={sectionVariants}
+          >
+            <ContactFormPro />
+          </motion.div>
+          {/* Footer */}
+          <Footer />
         </div>
       </div>
     </div>
