@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PublishingHero from "@/components/publishing/PublishingHero";
+import ServiceBoxes from "@/components/publishing/ServiceBoxes";
 import TeamSection from "@/components/publishing/TeamSection";
 import ServicesSection from "@/components/publishing/ServicesSection";
 import ProcessSection from "@/components/publishing/ProcessSection";
@@ -20,6 +21,7 @@ const Publishing = () => {
       <Navbar />
       <main className="flex-grow">
         <PublishingHero />
+        <ServiceBoxes />
         <TeamSection />
         <ServicesSection />
         <ProcessSection />

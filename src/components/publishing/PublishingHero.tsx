@@ -15,7 +15,7 @@ const PublishingHero = () => {
             className="flex justify-center lg:justify-start"
           >
             <img 
-              src="/lovable-uploads/21fd0f43-d5f2-4ed1-a1a3-37e22ad2e28c.png" 
+              src="/lovable-uploads/28ecd23a-05ff-48fb-bdf2-d0890460ce73.png" 
               alt="Gaming devices"
               className="max-w-[90%] h-auto"
             />
