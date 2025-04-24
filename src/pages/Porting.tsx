@@ -1,7 +1,6 @@
-
 import React from "react";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { ArrowLeft, CheckCircle, Laptop, Smartphone, Gamepad, ChevronRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -53,6 +52,8 @@ const Porting = () => {
   
   return (
     <div className="min-h-screen bg-dark flex flex-col">
+      <ExitIntentPopup />
+      
       <Navbar />
       
       <main className="flex-grow">

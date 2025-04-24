@@ -1,7 +1,7 @@
-
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import PublishingHero from "@/components/publishing/PublishingHero";
 import ServiceBoxes from "@/components/publishing/ServiceBoxes";
 import TeamSection from "@/components/publishing/TeamSection";
@@ -18,6 +18,7 @@ import CTASection from "@/components/publishing/CTASection";
 const Publishing = () => {
   return (
     <div className="min-h-screen bg-[#1A103C] flex flex-col">
+      <ExitIntentPopup />
       <Navbar />
       <main className="flex-grow">
         <PublishingHero />

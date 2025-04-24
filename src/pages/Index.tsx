@@ -1,6 +1,6 @@
-
 import React, { Suspense, lazy, useEffect } from "react";
 import Navbar from "@/components/Navbar";
+import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { motion } from "framer-motion";
 const SplitHero = lazy(() => import("@/components/SplitHero"));
 import WhatWeDoPro from "@/components/WhatWeDoPro";
@@ -45,6 +45,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#111122] via-[#1a1a30] to-[#111122] bg-fixed overflow-hidden">
+      <ExitIntentPopup />
       <div className="fixed inset-0 z-0">
         <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-purple-primary/5 rounded-full blur-[100px]"></div>
         <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-purple-accent/5 rounded-full blur-[100px]"></div>
@@ -53,7 +54,6 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         <div>
-          {/* Hero Section remains as before */}
           <motion.div
             key="split-hero"
             initial="hidden"
@@ -64,7 +64,6 @@ const Index = () => {
               <SplitHero />
             </Suspense>
           </motion.div>
-          {/* What We Do PRO – now new layout */}
           <motion.div
             key="what-we-do-section"
             initial="hidden"
@@ -73,7 +72,6 @@ const Index = () => {
           >
             <WhatWeDoPro />
           </motion.div>
-          {/* Image Tiles */}
           <motion.div
             key="image-tiles-section"
             initial="hidden"
@@ -82,7 +80,6 @@ const Index = () => {
           >
             <ImageTiles />
           </motion.div>
-          {/* Stats & Testimonials */}
           <motion.div
             key="stats-testimonials-section"
             initial="hidden"
@@ -91,7 +88,6 @@ const Index = () => {
           >
             <StatsTestimonials />
           </motion.div>
-          {/* Success Stories section */}
           <motion.div
             key="success-stories-section"
             initial="hidden"
@@ -100,7 +96,6 @@ const Index = () => {
           >
             <SuccessStories />
           </motion.div>
-          {/* Contact Section */}
           <motion.div
             key="contact-section"
             initial="hidden"
@@ -109,7 +104,6 @@ const Index = () => {
           >
             <ContactFormPro />
           </motion.div>
-          {/* Footer */}
           <Footer />
         </div>
       </div>
