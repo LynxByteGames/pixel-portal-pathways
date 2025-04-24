@@ -1,5 +1,7 @@
+
 import React from "react";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { ArrowLeft, CheckCircle, Laptop, Smartphone, Gamepad, ChevronRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
