@@ -1,27 +1,27 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Porting, Publishing, Founding, Support } from 'lucide-react';
+import { ArrowRightLeft, Upload, Users, Headphones } from 'lucide-react';
 
 const services = [
   {
     title: "Porting",
-    icon: <Porting className="w-8 h-8 text-purple-400" />,
+    icon: <ArrowRightLeft className="w-8 h-8 text-purple-400" />,
     color: "from-purple-500/20 to-purple-600/20"
   },
   {
     title: "Publishing",
-    icon: <Publishing className="w-8 h-8 text-blue-400" />,
+    icon: <Upload className="w-8 h-8 text-blue-400" />,
     color: "from-blue-500/20 to-blue-600/20"
   },
   {
     title: "Founding",
-    icon: <Founding className="w-8 h-8 text-pink-400" />,
+    icon: <Users className="w-8 h-8 text-pink-400" />,
     color: "from-pink-500/20 to-pink-600/20"
   },
   {
     title: "Support",
-    icon: <Support className="w-8 h-8 text-yellow-400" />,
+    icon: <Headphones className="w-8 h-8 text-yellow-400" />,
     color: "from-yellow-500/20 to-yellow-600/20"
   }
 ];
