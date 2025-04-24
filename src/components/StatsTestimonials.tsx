@@ -3,9 +3,9 @@ import React from "react";
 import { Star } from "lucide-react";
 
 const stats = [
-  { value: "660M+", label: "Chinese gamers" },
-  { value: "30+", label: "Successful launches" },
-  { value: "0", label: "Failed releases" },
+  { value: "+50", label: "Games that we helped with" },
+  { value: "+10.000.000", label: "Users have downloaded our games" },
+  { value: "+600.000$", label: "Fundrising through private investors" },
 ];
 
 const testimonials = [

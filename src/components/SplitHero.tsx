@@ -90,22 +90,12 @@ const SplitHero = () => {
             </button>
           </motion.div>
           
-          {/* Floating badge */}
-          <div className="absolute top-10 right-10 bg-white/10 backdrop-blur-md rounded-full px-4 py-2 border border-white/20 text-white flex items-center shadow-lg">
-            <ExternalLink size={14} className="mr-2"/> 
-            <span className="text-sm font-medium">No Upfront Cost</span>
-          </div>
           
-          {/* Click indicator that appears on hover */}
-          <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center text-white/90 bg-black/20 backdrop-blur-sm rounded-full px-3 py-1">
-            <MousePointer className="animate-bounce mr-2" size={16} />
-            <span className="text-sm">Click to explore</span>
-          </div>
+
         </div>
         
         {/* Corner accents */}
-        <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-purple-primary/30 via-purple-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 -translate-x-16 -translate-y-16 group-hover:translate-x-0 group-hover:translate-y-0"></div>
-        <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-purple-primary/30 via-purple-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 translate-x-16 translate-y-16 group-hover:translate-x-0 group-hover:translate-y-0"></div>
+        
       </motion.div>
       
       {/* Publisher Section */}
@@ -164,22 +154,10 @@ const SplitHero = () => {
             </button>
           </motion.div>
           
-          {/* Floating badge */}
-          <div className="absolute top-10 right-10 bg-white/10 backdrop-blur-md rounded-full px-4 py-2 border border-white/20 text-white flex items-center shadow-lg">
-            <ExternalLink size={14} className="mr-2"/> 
-            <span className="text-sm font-medium">Multi-platform</span>
-          </div>
           
-          {/* Click indicator that appears on hover */}
-          <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center text-white/90 bg-black/20 backdrop-blur-sm rounded-full px-3 py-1">
-            <MousePointer className="animate-bounce mr-2" size={16} />
-            <span className="text-sm">Click to explore</span>
-          </div>
         </div>
         
-        {/* Corner accents */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-purple-accent/30 via-pink-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 translate-x-16 -translate-y-16 group-hover:translate-x-0 group-hover:translate-y-0"></div>
-        <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-purple-accent/30 via-pink-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 -translate-x-16 translate-y-16 group-hover:translate-x-0 group-hover:translate-y-0"></div>
+        
       </motion.div>
     </motion.div>
   );

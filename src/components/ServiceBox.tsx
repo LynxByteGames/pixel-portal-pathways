@@ -16,11 +16,13 @@ const ServiceBox: React.FC<Props> = ({ icon, title, desc, color }) => (
       minHeight: 180,
     }}
   >
+    {/* 
     <div className="w-12 h-12 flex items-center justify-center rounded-full mb-2" style={{
       background: color + "22"
     }}>
       {icon}
     </div>
+    */}
     <div className="font-semibold text-white text-xl">{title}</div>
     <div className="text-white/60 text-base flex-1">{desc}</div>
   </div>
