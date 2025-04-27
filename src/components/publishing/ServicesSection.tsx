@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
@@ -21,7 +20,11 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="bg-gradient-to-b from-[#1A103C] to-[#2B1F5C] py-20">
+    <section className="bg-[#1A103C] py-20 relative">
+      <div className="absolute inset-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-accent/5 rounded-full blur-[120px]" />
+      </div>
+      
       <div className="container mx-auto px-4">
         <motion.h2 
           className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
