@@ -14,19 +14,29 @@ const CalendlySection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Bring Your Game to Life?
+            Still not sure?
           </h2>
           <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
             Join forces with a publisher who understands your vision and has the expertise to make it a reality.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg"
-              className="bg-gradient-to-r from-purple-primary to-purple-accent hover:opacity-90 text-white font-semibold text-lg px-8 py-6 h-auto"
-            >
-              Schedule a Call
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+          <a
+  href="https://drive.google.com/file/d/1D_RuXG_nvnZpPiBqGJaVn-71VjOVI1Ma/view?usp=sharing"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block bg-gradient-to-r from-purple-primary to-purple-accent hover:opacity-90 text-white font-semibold text-lg px-8 py-6 h-auto rounded-lg"
+>
+  Open our pitch deck
+</a>
+
+<Button 
+  size="lg"
+  onClick={() => window.open('https://calendly.com/bartosz-ludera-lynxbytegames/publishing-consultation', '_blank')}
+  className="bg-gradient-to-r from-purple-primary to-purple-accent hover:opacity-90 text-white font-semibold text-lg px-8 py-6 h-auto"
+>
+Schedule free consultation
+  <ArrowRight className="ml-2 h-5 w-5" />
+</Button>
           </div>
         </div>
       </div>

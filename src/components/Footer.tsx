@@ -10,21 +10,28 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <img src="/public/lovable-uploads/a2b63ed7-39de-4220-b35c-4fa5682dd233.png" alt="LYNXBYTE GAMES" className="h-8" />
-              <span className="text-xl font-bold text-white">LYNXBYTE GAMES</span>
-            </div>
-            <p className="text-white/70 mb-4">
+          <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
+      <Link to="/" className="flex items-center space-x-4 group">
+  <div className="relative flex items-center space-x-2">
+    <div className="absolute inset-0 bg-purple-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <img 
+      alt="LYNXBYTE GAMES" 
+      className="h-16 w-auto relative transition-transform duration-300 group-hover:scale-105" 
+      src="/SYGNET-białe.png" 
+    />
+    <img 
+      alt="LYNXBYTE GAMES" 
+      className="h-8 w-auto relative transition-transform duration-300 group-hover:scale-105" 
+      src="/NAPISY-białe.png" 
+    />
+  </div>
+  </Link>
+  </div>
+            <p className="text-white/70 mb-4 pt-4">
               Connecting game developers with global audiences through publishing and porting excellence.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/lynxbyte-games" className="text-white/60 hover:text-white transition-colors">
                 <Linkedin size={20} />
               </a>
             </div>
@@ -44,16 +51,6 @@ const Footer = () => {
                   Game Porting
                 </Link>
               </li>
-              <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">
-                  Marketing Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">
-                  QA Testing
-                </a>
-              </li>
             </ul>
           </div>
           
@@ -62,18 +59,18 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">
-                  Terms of Service
+                <a className="text-white/70 hover:text-white transition-colors">
+                  LYNXBYTE GAMES PROSTA SPÓŁKA AKCYJNA
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">
-                  Privacy Policy
+                <a  className="text-white/70 hover:text-white transition-colors">
+                  NIP/EU VAT PL6793324030
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors">
-                  Cookie Policy
+                <a className="text-white/70 hover:text-white transition-colors">
+                KRS 0001158887
                 </a>
               </li>
             </ul>
@@ -85,11 +82,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-start">
                 <MapPin size={18} className="text-highlight mr-2 mt-0.5" />
-                <span className="text-white/70">123 Game Street, Digital City</span>
-              </li>
-              <li className="flex items-center">
-                <Phone size={18} className="text-highlight mr-2" />
-                <span className="text-white/70">+1 (555) 123-4567</span>
+                <span className="text-white/70">Poland, Cracow, Zamknięta 10/1.5 30-554</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-highlight mr-2" />

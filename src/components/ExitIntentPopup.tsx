@@ -36,7 +36,7 @@ export const ExitIntentPopup = () => {
 
   const handleScheduleClick = () => {
     // Replace this URL with your actual Calendly link
-    window.open('https://calendly.com/your-link', '_blank');
+    window.open('https://calendly.com/bartosz-ludera-lynxbytegames/publishing-consultation', '_blank');
     setIsOpen(false);
   };
 

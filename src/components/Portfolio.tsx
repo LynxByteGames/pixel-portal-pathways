@@ -4,12 +4,12 @@ import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 
 const portfolioItems = [
-  { title: "Game 1", image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-1.2.1&auto=format&fit=crop&q=80" },
-  { title: "Game 2", image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&q=80" },
-  { title: "Game 3", image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&q=80" },
-  { title: "Game 4", image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&q=80" },
-  { title: "Game 5", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&q=80" },
-  { title: "Game 6", image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&auto=format&fit=crop&q=80" },
+  { title: "Gold Mining Simulator", image: "/goldmining_sim.jpg" },
+  { title: "Dig Deep", image: "/capsule_616x353.jpg" },
+  { title: "Hole.io", image: "/holeio.jpg" },
+  { title: "Astro Miner", image: "/astro_minerr.jpg" },
+  { title: "Wild West Dynasty", image: "/header.jpg" },
+  { title: "Zombie Raft", image: "./zombie_raft.png" },
 ];
 
 const Portfolio = () => {
@@ -42,8 +42,7 @@ const Portfolio = () => {
     <section className="py-16 bg-dark will-change-transform">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white text-center">
-          Portfolio
-        </h2>
+        One of the games we worked on        </h2>
         
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"

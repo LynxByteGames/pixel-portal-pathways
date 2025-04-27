@@ -22,8 +22,9 @@ const Publishing = () => {
       <Navbar />
       <main className="flex-grow">
         <PublishingHero />
-        <ServiceBoxes />
+        
         <TeamSection />
+        <ServiceBoxes />
         <ServicesSection />
         <ProcessSection />
         <Portfolio />

@@ -31,7 +31,6 @@ const Navbar = () => {
     { name: 'Publishing', path: '/publishing' },
     { name: 'Porting', path: '/porting' },
     { name: 'For Investors', path: '/investors' },
-    { name: 'About', path: '#about' }
   ], []);
 
   const handlePitchGame = () => {
@@ -75,17 +74,22 @@ const Navbar = () => {
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center space-x-4 group">
-          <div className="relative">
-            <div className="absolute inset-0 bg-purple-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <img 
-              alt="LYNXBYTE GAMES" 
-              className="h-16 w-auto relative transition-transform duration-300 group-hover:scale-105" 
-              src="/lovable-uploads/8f471edf-00bd-403b-b576-55bc62ddd306.png" 
-            />
-          </div>
-          <span className="text-2xl font-bold bg-gradient-to-r from-white via-white to-white/80 bg-clip-text text-transparent tracking-tight transition-all duration-300 group-hover:from-purple-primary group-hover:via-white group-hover:to-white/80">LYNXBYTE GAMES</span>
-        </Link>
+      <Link to="/" className="flex items-center space-x-4 group">
+  <div className="relative flex items-center space-x-2">
+    <div className="absolute inset-0 bg-purple-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <img 
+      alt="LYNXBYTE GAMES" 
+      className="h-16 w-auto relative transition-transform duration-300 group-hover:scale-105" 
+      src="/SYGNET-białe.png" 
+    />
+    <img 
+      alt="LYNXBYTE GAMES" 
+      className="h-8 w-auto relative transition-transform duration-300 group-hover:scale-105" 
+      src="/NAPISY-białe.png" 
+    />
+  </div>
+</Link>
+
         
         <div className="hidden md:flex items-center space-x-10">
           <div className="flex space-x-8">
@@ -102,7 +106,7 @@ const Navbar = () => {
           
           <Button 
             onClick={handlePitchGame}
-            className="bg-gradient-to-r from-purple-primary to-purple-accent hover:from-purple-primary/90 hover:to-purple-accent/90 text-white font-medium px-6 py-6 h-auto text-base rounded-lg shadow-lg shadow-purple-primary/20 transition-all duration-300 hover:translate-y-[-2px] btn-shine"
+            className="bg-gradient-to-r from-purple-primary to-purple-accent hover:from-purple-primary/90 hover:to-purple-accent/90 text-white font-medium px-6 py-3 h-auto text-base rounded-lg shadow-lg shadow-purple-primary/20 transition-all duration-300 hover:translate-y-[-2px] btn-shine"
           >
             Pitch Your Game
           </Button>

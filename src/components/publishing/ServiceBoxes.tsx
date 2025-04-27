@@ -1,27 +1,25 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRightLeft, Upload, Users, Headphones } from 'lucide-react';
 
 const services = [
   {
     title: "Porting",
-    icon: <ArrowRightLeft className="w-8 h-8 text-purple-400" />,
+    image: "/porting1.png",
     color: "from-purple-500/20 to-purple-600/20"
   },
   {
     title: "Publishing",
-    icon: <Upload className="w-8 h-8 text-blue-400" />,
+    image: "/porting2.png",
     color: "from-blue-500/20 to-blue-600/20"
   },
   {
     title: "Founding",
-    icon: <Users className="w-8 h-8 text-pink-400" />,
+    image: "/porting3.png",
     color: "from-pink-500/20 to-pink-600/20"
   },
   {
     title: "Support",
-    icon: <Headphones className="w-8 h-8 text-yellow-400" />,
+    image: "/porting4.png",
     color: "from-yellow-500/20 to-yellow-600/20"
   }
 ];
@@ -41,7 +39,11 @@ const ServiceBoxes = () => {
             >
               <div className="flex flex-col items-center text-center">
                 <div className="mb-4">
-                  {service.icon}
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-48 h-48 object-contain"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {service.title}

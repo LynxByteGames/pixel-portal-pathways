@@ -24,7 +24,7 @@ const CTASection = () => {
             size="lg"
             className="bg-gradient-to-r from-purple-primary to-purple-accent hover:opacity-90 text-white font-bold text-lg px-12 py-6 h-auto transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl shadow-purple-primary/20"
           >
-            Start Your Journey
+            Pitch your game
             <ArrowRight className="ml-2 h-6 w-6" />
           </Button>
         </div>

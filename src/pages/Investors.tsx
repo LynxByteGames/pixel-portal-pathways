@@ -75,13 +75,14 @@ const Investors = () => {
                   Schedule a Meeting
                 </button>
                 <button className="bg-transparent border-2 border-white/30 text-white font-bold px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300">
-                  Download Investor Deck
+                  MORE INFORMATION SOON
                 </button>
               </motion.div>
             </div>
           </motion.div>
+        </section>
           
-          {/* Decorative elements */}
+          {/* Decorative elements 
           <motion.div 
             className="absolute -bottom-10 right-[10%] w-20 h-20 bg-white/10 backdrop-blur-md rounded-full"
             initial={{ y: 50, opacity: 0 }}
@@ -96,7 +97,6 @@ const Investors = () => {
           ></motion.div>
         </section>
         
-        {/* Key Investment Highlights */}
         <motion.section 
           className="py-20 bg-dark relative overflow-hidden"
           variants={containerVariants}
@@ -188,10 +188,8 @@ const Investors = () => {
           </div>
         </motion.section>
         
-        {/* Performance Metrics */}
         <Stats />
         
-        {/* Investment Strategy */}
         <motion.section 
           className="py-20 bg-gradient-to-br from-dark to-dark/80 relative overflow-hidden"
           variants={containerVariants}
@@ -274,7 +272,6 @@ const Investors = () => {
           </div>
         </motion.section>
         
-        {/* Contact CTA */}
         <motion.section 
           className="py-20 bg-dark"
           initial={{ opacity: 0 }}
@@ -327,6 +324,7 @@ const Investors = () => {
             </div>
           </div>
         </motion.section>
+        */}
       </main>
       
       <Footer />

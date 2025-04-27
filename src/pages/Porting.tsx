@@ -99,7 +99,7 @@ const Porting = () => {
             >
               <button className="bg-gradient-to-r from-purple-accent to-pink-500 text-white font-bold rounded-lg px-8 py-4 group relative overflow-hidden shadow-xl shadow-purple-accent/20 hover:shadow-purple-accent/40 hover:translate-y-[-3px] transition-all">
                 <span className="relative z-10 flex items-center">
-                  Get a Porting Quote <ChevronRight className="ml-2 transition-transform group-hover:translate-x-1" size={20} />
+                  MORE INFORMATION SOON  <ChevronRight className="ml-2 transition-transform group-hover:translate-x-1" size={20} />
                 </span>
                 <span className="absolute inset-0 bg-gradient-to-r from-purple-accent to-purple-accent blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-700"></span>
               </button>
@@ -117,8 +117,9 @@ const Porting = () => {
             </motion.div>
           </motion.div>
         </div>
+
         
-        {/* Content Section */}
+        {/* 
         <motion.section 
           className="py-20"
           variants={containerVariants}
@@ -162,7 +163,6 @@ const Porting = () => {
                         {platform.description}
                       </p>
                       
-                      {/* Decorative corner accent */}
                       <div className="absolute bottom-3 right-3 w-20 h-20 bg-gradient-to-tl from-purple-primary/20 to-transparent rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                     </div>
                   ))}
@@ -215,7 +215,6 @@ const Porting = () => {
                           {item.description}
                         </p>
                         
-                        {/* Decorative corner accent */}
                         <div className="absolute bottom-3 right-3 w-20 h-20 bg-gradient-to-tl from-purple-accent/20 to-transparent rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                       </div>
                     ))}
@@ -242,10 +241,12 @@ const Porting = () => {
             </div>
           </div>
         </motion.section>
+        Content Section */}
       </main>
-      
       <Footer />
-    </div>
+      </div>
+    
+
   );
 };
 
