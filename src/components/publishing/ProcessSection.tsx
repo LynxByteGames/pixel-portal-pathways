@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -36,11 +37,7 @@ const steps = [
 
 const ProcessSection = () => {
   return (
-    <section className="bg-[#1A103C] py-20">
-      <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-accent/5 rounded-full blur-[120px]" />
-      </div>
-      
+    <section className="bg-[#2B1F5C] py-20">
       <div className="container mx-auto px-4">
         <motion.h2 
           className="text-4xl font-bold text-white mb-4"

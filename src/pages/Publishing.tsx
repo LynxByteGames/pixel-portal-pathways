@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
@@ -11,34 +11,78 @@ import ProcessSection from "@/components/publishing/ProcessSection";
 import FAQSection from "@/components/publishing/FAQSection";
 import Portfolio from "@/components/Portfolio";
 import InformationSection from "@/components/publishing/InformationSection";
-import StatsCounter from "@/components/StatsCounter";
 import CTASection from "@/components/publishing/CTASection";
+import StatsCounter from "@/components/StatsCounter";
+import { motion, useAnimation } from "framer-motion";
 
 const Publishing = () => {
-  return (
-    <div className="min-h-screen bg-[#1A103C] flex flex-col relative">
-      {/* Background gradient effects */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-accent/5 rounded-full blur-[120px]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-primary/5 rounded-full blur-[100px]" />
-        </div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMC41IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIi8+PC9zdmc+')] opacity-30"></div>
-      </div>
+  const controls = useAnimation();
 
+  useEffect(() => {
+    // Animate sections when they come into view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("section-visible");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".animate-on-scroll").forEach(section => {
+      observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-dark to-purple-dark flex flex-col">
       <ExitIntentPopup />
       <Navbar />
-      <main className="flex-grow relative z-10">
-        <PublishingHero />
-        <ServiceBoxes />
-        <TeamSection />
-        <ServicesSection />
-        <ProcessSection />
-        <Portfolio />
-        <FAQSection />
-        <InformationSection />
-        <StatsCounter />
-        <CTASection />
+      <main className="flex-grow overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <PublishingHero />
+        </motion.div>
+        
+        <div className="animate-on-scroll transition-all duration-500 opacity-0 translate-y-8 section-visible:opacity-100 section-visible:translate-y-0">
+          <ServiceBoxes />
+        </div>
+        
+        <div className="animate-on-scroll transition-all duration-500 opacity-0 translate-y-8 section-visible:opacity-100 section-visible:translate-y-0 delay-150">
+          <TeamSection />
+        </div>
+        
+        <div className="animate-on-scroll transition-all duration-500 opacity-0 translate-y-8 section-visible:opacity-100 section-visible:translate-y-0 delay-150">
+          <ServicesSection />
+        </div>
+        
+        <div className="animate-on-scroll transition-all duration-500 opacity-0 translate-y-8 section-visible:opacity-100 section-visible:translate-y-0 delay-150">
+          <ProcessSection />
+        </div>
+        
+        <div className="animate-on-scroll transition-all duration-500 opacity-0 translate-y-8 section-visible:opacity-100 section-visible:translate-y-0 delay-150">
+          <Portfolio />
+        </div>
+        
+        <div className="animate-on-scroll transition-all duration-500 opacity-0 translate-y-8 section-visible:opacity-100 section-visible:translate-y-0 delay-150">
+          <FAQSection />
+        </div>
+        
+        <div className="animate-on-scroll transition-all duration-500 opacity-0 translate-y-8 section-visible:opacity-100 section-visible:translate-y-0 delay-150">
+          <InformationSection />
+        </div>
+        
+        <div className="animate-on-scroll transition-all duration-500 opacity-0 translate-y-8 section-visible:opacity-100 section-visible:translate-y-0 delay-150">
+          <CTASection />
+        </div>
+        
+        <div className="animate-on-scroll transition-all duration-500 opacity-0 translate-y-8 section-visible:opacity-100 section-visible:translate-y-0 delay-150">
+          <StatsCounter />
+        </div>
       </main>
       <Footer />
     </div>
