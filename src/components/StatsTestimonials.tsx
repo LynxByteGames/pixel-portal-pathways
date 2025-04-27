@@ -51,26 +51,7 @@ const StatsTestimonials = () => (
           </div>
         ))}
       </div>
-      {/* Testimonials row */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {testimonials.map(t => (
-          <div key={t.logo} className="bg-gradient-to-br from-[#18181c] via-[#222232] to-[#18181c] rounded-2xl p-7 border border-white/10 shadow-lg flex flex-col h-full">
-            <div className="flex flex-col gap-1 min-h-12 mb-3">
-              <div className="font-bold text-lg text-white mb-0.5">{t.logo}</div>
-            </div>
-            <div className="text-white/80 text-sm mb-3 flex-1">{t.text}</div>
-            <div className="flex items-center gap-2 mt-3">
-              <div className="flex gap-1">
-                {[...Array(t.stars)].map((_, i) =>
-                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                )}
-              </div>
-              <div className="ml-2 text-white text-sm font-semibold">{t.author}</div>
-            </div>
-            <div className="text-white/50 text-xs">{t.position}</div>
-          </div>
-        ))}
-      </div>
+      
     </div>
   </section>
 );
