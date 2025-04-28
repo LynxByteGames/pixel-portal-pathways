@@ -78,14 +78,6 @@ const Index = () => {
             animate="visible"
             variants={sectionVariants}
           >
-            <ImageTiles />
-          </motion.div>
-          <motion.div
-            key="stats-testimonials-section"
-            initial="hidden"
-            animate="visible"
-            variants={sectionVariants}
-          >
             <StatsTestimonials />
           </motion.div>
           <motion.div
@@ -94,6 +86,15 @@ const Index = () => {
             animate="visible"
             variants={sectionVariants}
           >
+            {/*<ImageTiles />
+          </motion.div>
+          <motion.div
+            key="stats-testimonials-section"
+            initial="hidden"
+            animate="visible"
+            variants={sectionVariants}
+          >
+            
             <SuccessStories />
           </motion.div>
           <motion.div
@@ -103,7 +104,9 @@ const Index = () => {
             variants={sectionVariants}
           >
             <ContactFormPro />
-          </motion.div>
+          */}
+            </motion.div>
+          
           <Footer />
         </div>
       </div>
