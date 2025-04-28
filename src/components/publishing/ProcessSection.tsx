@@ -37,8 +37,11 @@ const steps = [
 
 const ProcessSection = () => {
   return (
-    <section className="bg-[#2B1F5C] py-20">
-      <div className="container mx-auto px-4">
+    <section className="py-24 relative">
+      {/* Gradient background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-primary/20 to-purple-accent/20 blur-3xl"></div>
+      </div>      <div className="container mx-auto px-4 text-center">
         <motion.h2 
           className="text-4xl font-bold text-white mb-4"
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +49,7 @@ const ProcessSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          HOW CAN <span className="text-pink-400">WE HELP?</span>
+          How can <span className="text-yellow-400">we help?</span>
         </motion.h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -64,6 +67,7 @@ const ProcessSection = () => {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
               <p className="text-gray-300">{step.description}</p>
+              <h2 className='mt-4 text-yellow-500'>COST: 0$</h2>
             </motion.div>
           ))}
         </div>

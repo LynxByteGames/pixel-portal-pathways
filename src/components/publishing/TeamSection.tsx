@@ -12,11 +12,11 @@ const TeamSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold mb-6 text-white">
+          <h2 className="text-4xl font-bold mb-6 text-white text-center">
             We are an <span className="text-yellow-400">experienced team...</span>
           </h2>
-          <p className="text-lg text-gray-300 max-w-4xl mb-16">
-            ...of gaming industry veterans, passionate about porting and publishing games on consoles. 
+          <p className="text-lg text-gray-300  text-center">
+            of gaming industry veterans, passionate about porting and publishing games on consoles. 
             Our mission is to help developers reach new players on console platforms. With a strong focus on precision, 
             creativity, and technical excellence, we ensure smooth transitions to new systems, delivering immersive and 
             polished gaming experiences.

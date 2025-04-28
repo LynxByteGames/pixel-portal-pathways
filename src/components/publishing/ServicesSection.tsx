@@ -21,7 +21,10 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="bg-gradient-to-b from-[#1A103C] to-[#2B1F5C] py-20">
+    <section className=" py-20">
+            <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-primary/20 to-purple-accent/20 blur-3xl"></div>
+      </div>
       <div className="container mx-auto px-4">
         <motion.h2 
           className="text-4xl md:text-5xl font-bold text-white text-center mb-16"

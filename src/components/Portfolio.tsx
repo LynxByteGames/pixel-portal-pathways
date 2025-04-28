@@ -40,7 +40,10 @@ const Portfolio = () => {
 
   return (
     <section className="py-16 bg-dark will-change-transform">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 text-center">
+      <span className="inline-block px-4 py-1 rounded-full bg-purple-primary/10 text-purple-accent mb-4 text-sm font-medium uppercase tracking-wider">
+      PORTFOLIO
+    </span>
         <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white text-center">
         One of the games we worked on        </h2>
         

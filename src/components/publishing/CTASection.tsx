@@ -20,13 +20,16 @@ const CTASection = () => {
           <p className="text-xl text-white/70 mb-12 max-w-2xl mx-auto">
             Join the ranks of successful game developers who've partnered with us to reach millions of players worldwide.
           </p>
-          <Button 
-            size="lg"
-            className="bg-gradient-to-r from-purple-primary to-purple-accent hover:opacity-90 text-white font-bold text-lg px-12 py-6 h-auto transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl shadow-purple-primary/20"
-          >
-            Pitch your game
-            <ArrowRight className="ml-2 h-6 w-6" />
-          </Button>
+          <a 
+  href="https://forms.gle/i8mde8Es6Fj287YC8"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-purple-400 hover:opacity-90 text-white font-bold text-lg px-12 py-6 h-auto rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl shadow-purple-600/20"
+>
+  Pitch your game
+  <ArrowRight className="ml-3 h-6 w-6 text-white" />
+</a>
+
         </div>
       </div>
     </section>

@@ -11,13 +11,13 @@ const HeroSection = () => {
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-primary/20 rounded-full blur-3xl"></div>
       <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-accent/20 rounded-full blur-3xl"></div>
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 text-center">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-primary via-purple-accent to-pink-500 bg-clip-text text-transparent animate-fadeIn">
             About Us
           </h1>
           
-          <p className="text-xl text-white/80 leading-relaxed mb-8 animate-fadeIn" style={{animationDelay: "0.2s"}}>
+          <p className="text-xl text-white/80 leading-relaxed mb-4 animate-fadeIn" style={{animationDelay: "0.2s"}}>
             We are an experienced team of gaming industry veterans, passionate about porting and publishing 
             games on consoles. Our mission is to help developers & publishers reach new players on console 
             platforms. With a strong focus on precision, creativity, and technical excellence, we ensure 

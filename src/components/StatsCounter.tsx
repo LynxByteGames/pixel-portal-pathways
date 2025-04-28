@@ -134,7 +134,7 @@ const StatsCounter = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block px-4 py-1 rounded-full bg-purple-primary/10 text-purple-accent mb-4 text-sm font-medium uppercase tracking-wider">By The Numbers</span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-primary to-purple-accent bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 ">
             Our Impact
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto text-xl">

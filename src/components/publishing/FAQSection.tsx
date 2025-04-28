@@ -33,17 +33,29 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section className="bg-[#1A103C] py-20">
+    <section className="bg-gradient-to-br from-purple-dark to-dark py-20">
+
+      {/* Decorative elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-accent/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-primary/10 rounded-full blur-[100px]" />
+      </div>
       <div className="container mx-auto px-4">
-        <motion.h2 
-          className="text-4xl font-bold text-white text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          Frequently Asked Questions
-        </motion.h2>
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+    className="text-center mb-12"
+  >
+    <span className="inline-block px-4 py-1 rounded-full bg-purple-primary/10 text-purple-accent mb-4 text-sm font-medium uppercase tracking-wider">
+      FAQ
+    </span>
+    <h2 className="text-4xl font-bold text-white">
+      Frequently Asked Questions
+    </h2>
+  </motion.div>
+
         
         <motion.div 
           className="max-w-3xl mx-auto bg-[#1E1B4B]/60 backdrop-blur-sm rounded-2xl p-6"
