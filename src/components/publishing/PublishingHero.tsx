@@ -38,7 +38,7 @@ const PublishingHero = () => {
               marketing, publishers, and all the other details.
             </p>
             <a
-  href="https://drive.google.com/file/d/1D_RuXG_nvnZpPiBqGJaVn-71VjOVI1Ma/view?usp=sharing"
+  href="https://drive.google.com/file/d/1k-75qs4_n_C5F5pPMkXOOyApfY9MQ4HB/view?usp=sharing"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-block mt-4 bg-gradient-to-r from-purple-primary to-purple-accent hover:opacity-90 text-white font-semibold text-lg px-8 py-6 h-auto rounded-lg"
