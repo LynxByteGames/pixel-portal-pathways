@@ -21,7 +21,7 @@ const CalendlySection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-  href="https://drive.google.com/file/d/1k-75qs4_n_C5F5pPMkXOOyApfY9MQ4HB/view?usp=sharing"
+  href="https://drive.google.com/file/d/1O7OCqwpo_w5KWdp6Q4bGRic_nbGcxV2f/view?usp=sharing"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-block bg-gradient-to-r from-purple-primary to-purple-accent hover:opacity-90 text-white font-semibold text-lg px-8 py-6 h-auto rounded-lg"
