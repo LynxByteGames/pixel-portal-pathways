@@ -61,7 +61,7 @@ const UnderDevelopment = () => {
             <p className="mb-6">
               We are currently not publishing games, but focusing on providing{" "}
               <span className="text-[#ff007e] font-semibold">the best services</span>{" "}
-              for developers.
+              for developers and publishers.
             </p>
             <p>
               We help game creators reach more players through professional
