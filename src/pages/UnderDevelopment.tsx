@@ -26,19 +26,18 @@ const UnderDevelopment = () => {
       {/* Content */}
       <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Logo placeholder */}
+          {/* Logo */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <div className="w-32 h-32 mx-auto mb-8 bg-white rounded-2xl flex items-center justify-center">
-              <div className="text-black font-bold text-2xl">
-                LYNXBYTE<br />
-                <span className="text-sm">GAMES</span>
-              </div>
-            </div>
+            <img 
+              src="/lovable-uploads/21e5c1eb-b51a-4e2b-bce8-cbc8c5956338.png" 
+              alt="LynxByte Games Logo"
+              className="w-32 h-32 mx-auto mb-8 object-contain"
+            />
           </motion.div>
 
           {/* Main heading */}
@@ -48,8 +47,8 @@ const UnderDevelopment = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-5xl md:text-7xl font-bold text-white mb-8"
           >
-            STRONA W{" "}
-            <span className="text-[#ff007e]">BUDOWIE</span>
+            UNDER{" "}
+            <span className="text-[#ff007e]">DEVELOPMENT</span>
           </motion.h1>
 
           {/* Description */}
@@ -60,13 +59,13 @@ const UnderDevelopment = () => {
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
             <p className="mb-6">
-              Obecnie nie będziemy wydawać gier, ale skupiamy się na świadczeniu{" "}
-              <span className="text-[#ff007e] font-semibold">najlepszych usług</span>{" "}
-              dla deweloperów.
+              We are currently not publishing games, but focusing on providing{" "}
+              <span className="text-[#ff007e] font-semibold">the best services</span>{" "}
+              for developers.
             </p>
             <p>
-              Pomagamy twórcom gier dotrzeć do większej liczby graczy poprzez profesjonalne
-              usługi portingu, marketingu i publikacji.
+              We help game creators reach more players through professional
+              porting, marketing, and publishing services.
             </p>
           </motion.div>
 
@@ -80,7 +79,7 @@ const UnderDevelopment = () => {
               onClick={handleOpenOldVersion}
               className="bg-[#ff007e] hover:bg-[#e6006e] text-white font-bold text-lg px-12 py-6 h-auto rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#ff007e]/30"
             >
-              Otwórz starą wersję strony
+              Open old version of the site
             </Button>
           </motion.div>
 
