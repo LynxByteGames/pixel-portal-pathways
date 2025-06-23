@@ -63,10 +63,6 @@ const UnderDevelopment = () => {
               <span className="text-[#ff007e] font-semibold">the best services</span>{" "}
               for developers and publishers.
             </p>
-            <p>
-              We help game creators reach more players through professional
-              porting, marketing, and publishing services.
-            </p>
           </motion.div>
 
           {/* CTA Button */}
