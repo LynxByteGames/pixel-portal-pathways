@@ -1,0 +1,128 @@
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+
+const UnderDevelopment = () => {
+  const handleOpenOldVersion = () => {
+    // Navigate to the main site
+    window.location.href = '/main';
+  };
+
+  return (
+    <div 
+      className="min-h-screen bg-cover bg-center bg-no-repeat relative overflow-hidden"
+      style={{
+        backgroundImage: `url('/lovable-uploads/8623cfbe-3aee-4feb-8a3c-7bc1a7bfb0e0.png')`
+      }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/70"></div>
+      
+      {/* Pink accent shapes */}
+      <div className="absolute top-4 left-4 w-16 h-16 bg-[#ff007e] transform rotate-45"></div>
+      <div className="absolute bottom-4 right-4 w-12 h-12 bg-[#ff007e] transform rotate-45"></div>
+      
+      {/* Content */}
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Logo placeholder */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <div className="w-32 h-32 mx-auto mb-8 bg-white rounded-2xl flex items-center justify-center">
+              <div className="text-black font-bold text-2xl">
+                LYNXBYTE<br />
+                <span className="text-sm">GAMES</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Main heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-5xl md:text-7xl font-bold text-white mb-8"
+          >
+            STRONA W{" "}
+            <span className="text-[#ff007e]">BUDOWIE</span>
+          </motion.h1>
+
+          {/* Description */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
+          >
+            <p className="mb-6">
+              Obecnie nie będziemy wydawać gier, ale skupiamy się na świadczeniu{" "}
+              <span className="text-[#ff007e] font-semibold">najlepszych usług</span>{" "}
+              dla deweloperów.
+            </p>
+            <p>
+              Pomagamy twórcom gier dotrzeć do większej liczby graczy poprzez profesjonalne
+              usługi portingu, marketingu i publikacji.
+            </p>
+          </motion.div>
+
+          {/* CTA Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            <Button
+              onClick={handleOpenOldVersion}
+              className="bg-[#ff007e] hover:bg-[#e6006e] text-white font-bold text-lg px-12 py-6 h-auto rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#ff007e]/30"
+            >
+              Otwórz starą wersję strony
+            </Button>
+          </motion.div>
+
+          {/* Animated elements */}
+          <motion.div
+            animate={{
+              y: [0, -10, 0],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute top-1/4 left-1/4 w-3 h-3 bg-[#ff007e] rounded-full opacity-60"
+          />
+          
+          <motion.div
+            animate={{
+              y: [0, 10, 0],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+            className="absolute top-1/3 right-1/3 w-2 h-2 bg-[#ff007e] rounded-full opacity-40"
+          />
+        </div>
+      </div>
+
+      {/* Bottom info */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+        className="absolute bottom-8 left-8 text-white/60 text-sm"
+      >
+        LYNXBYTEGAMES.EU
+      </motion.div>
+    </div>
+  );
+};
+
+export default UnderDevelopment;
